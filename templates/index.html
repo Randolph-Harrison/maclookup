@@ -1,0 +1,23 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAC Address Lookup</title>
+  </head>
+  <body>
+    <h2>MAC Lookup</h2>
+    <form action="/lookup" method="GET">
+      <p>The MAC address needs to be in the format of ff:ff:ff:ff:ff:ff, where all characters are lowercase separated by a semicolon.</p>
+      <label for="mac">MAC Address:</label>
+      <input type="text" id="mac" name="mac" required><br><br>
+      <p>The site ID for where the device is located.</p>
+      <label for="site">Site ID:</label>
+      <select id="site" name="site">
+        <option value="">A01</option>
+      </select>
+    </form>
+  </body>
+</html>
