@@ -7,12 +7,12 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/lookup', methods=['POST'])
+@app.route('/lookup')
 def handle_lookup():
-    mac = request.form['mac']
-    site = request.form['site']
+    mac = request.args['mac']
+    site = request.args['site']
     result = lookup_mac(mac, site)
-    return f"<p>Lookup Result: {result}"
+    return render_template('index.html', result=result)
 
 if __name__ == '__main__':
     app.run(debug=True)
