@@ -18,10 +18,17 @@
       <select id="site" name="site">
         <option value="a01">A01</option>
         <option value="a02">A02</option>
-      </select>
-    </form>
+      </select><br><br>
+      <input type="submit" value="Submit">
+    </form><br><br>
     {% if result %}
     <h3>{{ result }}</h3>
+    <form action="/bounce_poe" method="GET">
+      <button type="submit">Bounce POE</button>
+    </form><br><br>
+    {% endif %}
+    {% if poe_bounced %}
+    <h3>{{ poe_bounced }}</h3>
     {% endif %}
   </body>
 </html>

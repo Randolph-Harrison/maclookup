@@ -2,6 +2,9 @@
 * flask
 * some wsgi production server
 * netmiko
+* python3-dotenv
+
+Need to create .env file for password
 
 ### SITE ID
 assume /21 prefix if not specified
